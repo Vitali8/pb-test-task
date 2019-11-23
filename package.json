@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "watching": "node ./node_modules/gulp/bin/gulp.js watch"
+    "watching": "node ./node_modules/gulp/bin/gulp.js watch",
+    "build": "node ./node_modules/gulp/bin/gulp.js build"
   },
   "dependencies": {
     "glob": "^7.1.1",

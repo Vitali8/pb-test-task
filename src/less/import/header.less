@@ -6,10 +6,35 @@
     position: relative;
 
     .logo {
-      float: left;
-      display: flex;
-      height: 78px;
+      float      : left;
+      display    : flex;
+      height     : 78px;
       align-items: center;
+
+      .navbar-header {
+
+        @media @laptop {
+          float: left;
+        }
+      }
+    }
+  }
+
+  &-toggler {
+    position: absolute;
+    top     : 30px;
+    right   : 15px;
+
+    .bar {
+      display      : block;
+      width        : 35px;
+      height       : 1px;
+      background   : white;
+      margin-bottom: 5px;
+    }
+
+    @media @laptop {
+      display: none;
     }
   }
 
@@ -20,14 +45,84 @@
       text-align: left;
       border-top: 1px solid white;
     }
+    
+    &.menu-open {
+      display: block;
+    }
+
+    @media @laptop {
+      display: block;
+    }
 
     a.top-link {
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.69);
-      padding: 20px 25px;
-      display: inline-block;
-      width: 100%;
+      color      : rgba(255, 255, 255, 0.69);
+      padding    : 20px 25px;
+      display    : inline-block;
+      width      : 100%;
     }
-    
+
+    &>ul>li {
+      margin: 0 0 0 -4px;
+
+      @media @laptop {
+        display: inline-block;
+      }
+
+      .dropdown-block {
+        display   : none;
+        background: #fff;
+        position  : absolute;
+        left      : -15px;
+        right     : -15px;
+        z-index   : 10;
+      }
+
+      &.dropdownShow {
+        .dropdown-block {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .dropdown-block-container {
+    font-size: 14px;
+    padding  : 30px 15px 50px;
+    width    : 100%;
+    max-width: 1310px;
+    margin   : auto;
+
+    .preview-pages {
+      text-align: center;
+
+      li {
+        display     : inline-block;
+        margin-right: 15px;
+        text-align  : left;
+
+        @media @laptop {
+          margin-right: 30px;
+        }
+      }
+
+      span {
+        display      : block;
+        color        : #646464;
+        margin-bottom: 11px;
+      }
+    }
+
+    .list-pages {
+      text-align: left;
+
+      a {
+        color: #646464;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
