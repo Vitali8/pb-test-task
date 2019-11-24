@@ -1,0 +1,40 @@
+.social-media {
+  padding: 20px 0;
+
+  .social-media-description {
+    max-width: 360px;
+
+    p {
+      margin: 12px 0 0;
+    }
+  }
+}
+
+.soc-links {
+  li {
+    display    : inline-block;
+    margin-left: 17px;
+
+    @media @tablet {
+      margin-left: 50px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a {
+    color    : #cccccc;
+    font-size: 25px;
+
+    @media @tablet {
+      font-size: 48px;
+    }
+
+    &:hover {
+      -webkit-transform: scale(1.3, 1.3);
+      transform        : scale(1.3, 1.3);
+    }
+  }
+}
