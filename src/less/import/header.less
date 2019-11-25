@@ -60,6 +60,21 @@
       padding    : 20px 25px;
       display    : inline-block;
       width      : 100%;
+
+      @media @laptop {
+        padding: 30px;
+        width  : auto;
+      }
+
+      &:hover {
+        background: @main-color;
+      }
+
+      &:active,
+      &:focus {
+        background: transparent;
+        color     : @main-color;
+      }
     }
 
     &>ul>li {
@@ -114,7 +129,13 @@
     }
 
     .list-pages {
-      text-align: left;
+      text-align          : left;
+      -webkit-column-count: 2; // Chrome, Safari, Opera
+      -moz-column-count   : 2; // Firefox
+      column-count        : 2;
+      -webkit-column-gap  : 20px; // Chrome, Safari, Opera
+      -moz-column-gap     : 20px; // Firefox
+      column-gap          : 20px;
 
       li {
         padding-top: 10px;
@@ -141,11 +162,11 @@
     color        : white;
     margin-bottom: 30px;
     text-align   : center;
-    max-width: 523px;
-    
+    max-width    : 523px;
+
     @media @laptop {
       margin-bottom: 0;
-      text-align: left;
+      text-align   : left;
     }
 
     h1 {
@@ -162,6 +183,12 @@
         margin-bottom: 45px;
       }
     }
+
+    .line-after:after {
+      @media only screen and(max-width: 1023px) {
+        margin: auto;
+      }
+    }
   }
 
   .header-form-block {
@@ -171,6 +198,10 @@
     text-align   : center;
     border-radius: 3px;
     overflow     : hidden;
+
+    @media only screen and(max-width: 1023px) {
+      margin: auto;
+    }
 
     .form-title {
       display    : block;
@@ -197,8 +228,47 @@
       }
 
       &:focus {
-        background: rgb(245, 115, 16);
+        background: #f8740e;
       }
+
+      &:active {
+        background: #37495e;
+      }
+    }
+  }
+}
+
+.touch-device .navigation>ul>li {
+  .dropdown-block {
+    @media @laptop {
+      left : calc(~'470px - 50vw');
+      right: calc(~'470px - 50vw');
+    }
+
+    @media @desktop {
+      left : calc(~'555px - 50vw');
+      right: calc(~'555px - 50vw');
+    }
+  }
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 30px;
+  transition: .2s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-transparent {
+    border: 2px solid white;
+    color: white;
+
+    &:hover {
+      border: 2px solid @main-color;
+      background: @main-color;
     }
   }
 }
