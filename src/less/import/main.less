@@ -38,3 +38,38 @@
     }
   }
 }
+
+.tabs-section {
+  .tabs-button li {
+    border-bottom: 1px solid whitesmoke;
+    display: inline-block;
+    margin-bottom: 30px;
+    
+    a {
+      display: block;
+      padding: 30px 25px;
+      background: @second-color;
+      color: white;
+
+      &:hover,
+      &.active {
+        background: @main-color;
+      }
+    }
+  }
+
+  .active-tab-content {
+    width: 100%;
+    max-width: 476px;
+    align-self: flex-start;
+    margin-bottom: 30px;
+
+    & > div {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

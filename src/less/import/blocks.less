@@ -1,0 +1,37 @@
+//TODO: BEM
+
+.btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 30px;
+  transition: .2s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-transparent {
+    border: 2px solid white;
+    color: white;
+
+    &:hover {
+      border: 2px solid @main-color;
+      background: @main-color;
+    }
+  }
+  
+  &-primary {
+    border: 2px solid @main-color;
+    background: @main-color;
+    color: white;
+
+    &:hover {
+      color: @main-color;
+      background: transparent;
+    }
+  }
+
+  &-round {
+    border-radius: 3px;
+  }
+}

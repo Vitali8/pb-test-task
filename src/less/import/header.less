@@ -1,5 +1,5 @@
 .top-navbar {
-  background: #37495e;
+  background: @second-color;
   text-align: right;
 
   nav {
@@ -232,7 +232,7 @@
       }
 
       &:active {
-        background: #37495e;
+        background: @second-color;
       }
     }
   }
@@ -248,27 +248,6 @@
     @media @desktop {
       left : calc(~'555px - 50vw');
       right: calc(~'555px - 50vw');
-    }
-  }
-}
-
-.btn {
-  font-size: 15px;
-  font-weight: 600;
-  padding: 15px 30px;
-  transition: .2s;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &-transparent {
-    border: 2px solid white;
-    color: white;
-
-    &:hover {
-      border: 2px solid @main-color;
-      background: @main-color;
     }
   }
 }
