@@ -42,14 +42,14 @@
 .tabs-section {
   .tabs-button li {
     border-bottom: 1px solid whitesmoke;
-    display: inline-block;
+    display      : inline-block;
     margin-bottom: 30px;
-    
+
     a {
-      display: block;
-      padding: 30px 25px;
+      display   : block;
+      padding   : 30px 25px;
       background: @second-color;
-      color: white;
+      color     : white;
 
       &:hover,
       &.active {
@@ -59,17 +59,61 @@
   }
 
   .active-tab-content {
-    width: 100%;
-    max-width: 476px;
-    align-self: flex-start;
+    width        : 100%;
+    max-width    : 476px;
+    align-self   : flex-start;
     margin-bottom: 30px;
 
-    & > div {
+    &>div {
       display: none;
 
       &.active {
         display: block;
       }
+    }
+  }
+}
+
+.sub-list-section {
+  text-align: center;
+
+  li {
+    padding-left: 70px;
+    position    : relative;
+    margin-top  : 42px;
+
+    h3 {
+      font-size  : 16px;
+      font-weight: @semibold;
+    }
+
+    .fa {
+      position     : absolute;
+      left         : 0;
+      width        : 40px;
+      height       : 40px;
+      text-align   : center;
+      line-height  : 38px;
+      border       : 2px solid @main-color;
+      border-radius: 100%;
+    }
+  }
+
+  img {
+    box-shadow: 1px 14px 40px 6px #c3c3c3;
+
+    @media @laptop {
+      float: left;
+    }
+  }
+
+  .info-section {
+    margin    : auto;
+    text-align: left;
+
+    @media @laptop {
+      float : right;
+      margin: 0;
     }
   }
 }
