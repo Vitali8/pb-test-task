@@ -136,10 +136,33 @@ img {
   padding-bottom: 30px;
   margin-bottom : 30px;
 
+  &:after {
+    content   : "";
+    position  : relative;
+    display   : block;
+    bottom    : -30px;
+    width     : 64px;
+    height    : 2px;
+    background: @main-color;
+  }
+
+  &.light-line {
+    &:after {
+      background: white;
+    }
+  }
+
+  &-center {
+    text-align: center;
+
+    &:after {
+      margin: auto;
+    }
+  }
 }
 
 .simple-text-container {
-  width: 100%;
+  width    : 100%;
   max-width: 475px;
 }
 
