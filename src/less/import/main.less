@@ -146,3 +146,43 @@
     }
   }
 }
+
+.features {
+
+  li {
+    text-align   : center;
+    margin-bottom: 30px;
+
+    @media @laptop {
+      width        : 32%;
+      max-width    : 345px;
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-block {
+    width              : 70px;
+    height             : 70px;
+    margin             : 0 auto 30px;
+    border             : 2px solid @main-color;
+    border-radius      : 100%;
+    background-repeat  : no-repeat;
+    background-position: center;
+  }
+
+  .lightness {
+    background-image: @lightness-image;
+  }
+
+  .keyboard {
+    background-image: @keyboard-image;
+  }
+
+  .lamp {
+    background-image: @lamp-image;
+  }
+
+  h2 {
+    padding-bottom: 30px;
+  }
+}
