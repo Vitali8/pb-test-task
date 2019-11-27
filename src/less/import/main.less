@@ -186,3 +186,77 @@
     padding-bottom: 30px;
   }
 }
+
+.pricing-section {
+  text-align: center;
+
+  .pricing-plans {
+    align-items: flex-end;
+
+    &>li {
+      width        : 100%;
+      max-width    : 345px;
+      margin-bottom: 30px;
+
+      @media @laptop {
+        width: 32%;
+      }
+    }
+
+    ul {
+      background: white;
+      border-top: 5px solid @main-color;
+
+      li {
+        text-transform: uppercase;
+        color         : #86878b;
+        padding       : 14px 0;
+        border-bottom : 1px solid #c3c3c3;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .name-plan,
+  .time-plan,
+  .price-plan {
+    padding   : 20px 0;
+    background: @second-color;
+    color     : white;
+  }
+
+  .name-plan {
+    font-size  : 20px;
+    font-weight: 700;
+  }
+
+  .price-plan {
+    font-family  : 'Raleway', sans-serif;
+    font-size    : 95px;
+    font-weight  : 700;
+    border-top   : 1px solid white;
+    border-bottom: 1px solid white;
+    padding      : 0;
+
+    &>span {
+      font-size: 35px;
+    }
+  }
+
+  .time-plan {
+    font-size  : 14px;
+    font-weight: @semibold;
+    color      : rgba(255, 255, 255, 0.51);
+    font-style : italic;
+  }
+
+  .popular-plan {
+    color      : white;
+    font-weight: 700;
+    background : @main-color;
+    padding    : 13px 0 8px;
+  }
+}
