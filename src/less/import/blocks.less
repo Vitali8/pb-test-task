@@ -1,10 +1,10 @@
 //TODO: BEM
 
 .btn {
-  font-size: 15px;
-  font-weight: 600;
-  padding: 15px 30px;
-  transition: .2s;
+  font-size  : 15px;
+  font-weight: @semibold;
+  padding    : 15px 30px;
+  transition : .2s;
 
   &:hover {
     cursor: pointer;
@@ -12,21 +12,21 @@
 
   &-transparent {
     border: 2px solid white;
-    color: white;
+    color : white;
 
     &:hover {
-      border: 2px solid @main-color;
+      border    : 2px solid @main-color;
       background: @main-color;
     }
   }
 
   &-primary {
-    border: 2px solid @main-color;
+    border    : 2px solid @main-color;
     background: @main-color;
-    color: white;
+    color     : white;
 
     &:hover {
-      color: @main-color;
+      color     : @main-color;
       background: transparent;
     }
   }
@@ -38,9 +38,59 @@
 
 .slider {
   white-space: nowrap;
-  font-size: 0;
+  font-size  : 0;
 
-  // .slide {
+  &-container {
+    position: relative;
+  }
 
-  // }
+  &-wrap {
+    overflow: hidden;
+  }
+
+  &-nav {
+    position: absolute;
+    width   : 100%;
+    top     : 50px;
+
+    .arrow-right,
+    .arrow-left {
+      width     : 20px;
+      height    : 20px;
+      display   : block;
+      position  : absolute;
+      background: center no-repeat;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .arrow-right {
+      background-image: url("../images/right-arrow.png");
+      right           : -10px;
+
+      @media @desktop {
+        right: -60px;
+      }
+    }
+
+    .arrow-left {
+      background-image: url("../images/left-arrow.png");
+      left            : -10px;
+
+      @media @desktop {
+        left: -60px;
+      }
+    }
+  }
+
+  .slide {
+    white-space    : normal;
+    list-style-type: none;
+    display        : inline-block;
+    width          : 80%;
+    margin         : 0 10%;
+
+  }
 }

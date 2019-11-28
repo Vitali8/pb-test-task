@@ -11,4 +11,7 @@ $(document).ready(function () {
   $('.navigation li').on('mouseleave', function () {
     $(this).removeClass('dropdownShow');
   });
+
+  $('.slider').mySlider();
+
 });

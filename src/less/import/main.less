@@ -260,3 +260,73 @@
     padding    : 13px 0 8px;
   }
 }
+
+.feedback-section {
+  overflow: hidden;
+
+  li {
+    p {
+      margin    : 0;
+      font-style: italic;
+    }
+  }
+
+  .feedback {
+    padding      : 24px 12px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    position     : relative;
+
+    &:after {
+      content     : '';
+      position    : absolute;
+      left        : 25px;
+      bottom      : -15px;
+      width       : 0;
+      height      : 0;
+      border-left : 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-top: 15px solid whitesmoke;
+    }
+  }
+
+  .autor-feedback {
+    padding-left   : 85px;
+    position       : relative;
+    height         : 72px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+
+    img {
+      width        : 72px;
+      height       : 72px;
+      position     : absolute;
+      left         : 0;
+      border-radius: 100%;
+      overflow     : hidden;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .autor-name {
+    font-size    : 20px;
+    font-weight  : 700;
+    color        : #333333;
+    margin-bottom: 5px;
+  }
+
+  .autor-profession {
+    color: #86878b;
+  }
+}
+
+.parallax-section {
+  text-align: center;
+
+  //...
+}
