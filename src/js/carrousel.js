@@ -1,20 +1,51 @@
 (function ($) {
   'use strict';
-  //TODO: add sliding by arrows 
+
   $.fn.mySlider = function (options) {
     var settings = {
-      transition: 1000,
-      count: 3,
-      speed: 2000, //ms'
       auto: true,
+      count: 3,
+      transition: 1000,
+      speed: 2000, //ms'
       pauseOnHover: true
     },
-      i = -settings.count;
+      i = -settings.count,
+      autoMove,
+      touchstartX;
 
     function autoSlide(slider) {
       if (settings.auto) {
-        setInterval(move.bind(this, slider, 'right'), settings.speed);
+        autoMove = setInterval(move.bind(this, slider, 'right'), settings.speed);
       }
+    }
+
+    function bindEvents(slider) {
+      var slideNav = slider.next();
+      slideNav.find('.arrow-left').on('click', move.bind(this, slider, 'left'));
+      slideNav.find('.arrow-right').on('click', move.bind(this, slider, 'right'));
+
+      slider.closest('.slider-wrap').on('mouseenter', function () {
+        if (settings.pauseOnHover) {
+          clearInterval(autoMove);
+        }
+      })
+        .on('mouseleave', function () {
+          autoSlide(slider);
+        });
+
+      slider.on('touchstart', function (e) {
+        touchstartX = e.touches[0].clientX;
+      })
+        .on('touchend', function (e) {
+          var touchendX = e.changedTouches[0].clientX,
+            swipe = touchendX - touchstartX;
+
+          if (swipe > 70) {
+            move($(this), 'left');
+          } else if (swipe < 70) {
+            move($(this), 'right');
+          }
+        });
     }
 
     function renderSlider(slider) {
@@ -23,6 +54,7 @@
       $('<div class="slider-nav"><button class="arrow-left"></button><button class="arrow-right"></button></div>').appendTo(".slider-wrap");
 
       renderClone(slider);
+      bindEvents(slider);
     }
 
     function renderClone(slider) {
