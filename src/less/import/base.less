@@ -39,6 +39,30 @@ textarea {
   }
 }
 
+input::-ms-placeholder {
+  color: @placeholder-color;
+}
+
+input::-webkit-placeholder {
+  color: @placeholder-color;
+}
+
+input::placeholder {
+  color: @placeholder-color;
+}
+
+textarea::-ms-placeholder {
+  color: @placeholder-color;
+}
+
+textarea::-webkit-placeholder {
+  color: @placeholder-color;
+}
+
+textarea::placeholder {
+  color: @placeholder-color;
+}
+
 textarea {
   resize: none;
 }
@@ -49,6 +73,10 @@ section {
   @media @laptop {
     padding: 107px 0;
   }
+}
+
+.clear {
+  clear: both;
 }
 
 .field-row {
@@ -102,7 +130,7 @@ img {
 
 p,
 .subtitle {
-  color      : #86878b;
+  color      : @text-color;
   line-height: 20px;
   font-size  : 14px;
 }

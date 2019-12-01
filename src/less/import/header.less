@@ -92,14 +92,19 @@
         right     : -15px;
         z-index   : 10;
 
+        @media @desktop {
+          left : calc(~'565px - 50vw');
+          right: calc(~'565px - 50vw');
+        }
+
         @media @laptop {
           left : calc(~'480px - 50vw');
           right: calc(~'480px - 50vw');
         }
 
-        @media @desktop {
-          left : calc(~'565px - 50vw');
-          right: calc(~'565px - 50vw');
+        @media @tablet {
+          left : calc(~'370px - 50vw');
+          right: calc(~'370px - 50vw');
         }
       }
 
@@ -185,7 +190,7 @@
     color        : white;
     margin-bottom: 30px;
     text-align   : center;
-    
+
     @media @laptop {
       max-width    : 523px;
       margin-bottom: 0;
@@ -195,6 +200,10 @@
     h1 {
       color         : white;
       text-transform: uppercase;
+
+      @media @tablet {
+        padding-top: 52px;
+      }
 
       &+p {
         color        : white;
@@ -263,6 +272,11 @@
 
 .touch-device .navigation>ul>li {
   .dropdown-block {
+    @media @tablet {
+      left : calc(~'360px - 50vw');
+      right: calc(~'360px - 50vw');
+    }
+
     @media @laptop {
       left : calc(~'470px - 50vw');
       right: calc(~'470px - 50vw');
