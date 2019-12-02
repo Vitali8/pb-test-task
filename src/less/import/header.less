@@ -184,48 +184,50 @@
   }
 }
 
+.hero__wrap {
+  color        : white;
+  margin-bottom: 30px;
+  text-align   : center;
+
+  @media @laptop {
+    max-width    : 523px;
+    margin-bottom: 0;
+    text-align   : left;
+  }
+}
+
+.hero__title {
+  color         : white;
+  text-transform: uppercase;
+
+  @media @tablet {
+    padding-top: 52px;
+  }
+
+}
+
+.hero__description {
+  color        : white;
+  font-family  : 'Raleway', sans-serif;
+  font-weight  : 300;
+  font-size    : 16px;
+  opacity      : 0.6;
+  line-height  : 23px;
+  margin-bottom: 45px;
+}
+
+.hero__line-after:after {
+  @media only screen and(max-width: 1023px) {
+    margin: auto;
+  }
+}
+
 .hero {
 
   @media @laptop {
     padding: 140px 0;
   }
 
-  .header-download-block {
-    color        : white;
-    margin-bottom: 30px;
-    text-align   : center;
-
-    @media @laptop {
-      max-width    : 523px;
-      margin-bottom: 0;
-      text-align   : left;
-    }
-
-    h1 {
-      color         : white;
-      text-transform: uppercase;
-
-      @media @tablet {
-        padding-top: 52px;
-      }
-
-      &+p {
-        color        : white;
-        font-family  : 'Raleway', sans-serif;
-        font-weight  : 300;
-        font-size    : 16px;
-        opacity      : 0.6;
-        line-height  : 23px;
-        margin-bottom: 45px;
-      }
-    }
-
-    .line-after:after {
-      @media only screen and(max-width: 1023px) {
-        margin: auto;
-      }
-    }
-  }
 
   .header-form-block {
     width        : 100%;
