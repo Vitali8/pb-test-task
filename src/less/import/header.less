@@ -5,16 +5,23 @@
   nav {
     position: relative;
 
+
+    @media @desktop,
+    @tablet {
+      display        : flex;
+      justify-content: space-between;
+    }
+
     .logo {
-      float      : left;
-      display    : flex;
-      height     : 78px;
-      align-items: center;
+      // float      : left;
+      display       : flex;
+      height        : 78px;
+      align-items   : center;
 
       .navbar-header {
 
         @media @laptop {
-          float: left;
+          // float: left;
         }
       }
     }
