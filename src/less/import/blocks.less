@@ -93,11 +93,29 @@
       &:hover {
         cursor: pointer;
       }
+
+      @media @tablet {
+        width : 20px;
+        height: 20px;
+      }
+
+      @media @laptop {
+        width : 38px;
+        height: 38px;
+      }
     }
 
     .arrow-right {
       background-image: url("../images/right-arrow.png");
       right           : -10px;
+
+      @media @tablet {
+        right: -20px;
+      }
+
+      @media @laptop {
+        right: -34px;
+      }
 
       @media @desktop {
         right: -60px;
@@ -107,6 +125,14 @@
     .arrow-left {
       background-image: url("../images/left-arrow.png");
       left            : -10px;
+
+      @media @tablet {
+        left: -20px;
+      }
+
+      @media @laptop {
+        left: -34px;
+      }
 
       @media @desktop {
         left: -60px;
@@ -121,5 +147,16 @@
     width          : 80%;
     margin         : 0 10%;
 
+    @media @tablet {
+      width       : 45%;
+      margin-left : 0;
+      margin-right: 10%;
+    }
+
+    @media @laptop {
+      width       : calc(100%/4);
+      margin-left : 0;
+      margin-right: calc(100%/8);
+    }
   }
 }

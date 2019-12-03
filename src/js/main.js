@@ -36,4 +36,11 @@ $(document).ready(function () {
       $(this).closest('li').toggleClass('dropdownShow');
     }
   });
+
+  // large menu on hover event
+  if ('ontouchstart' in window) {
+    
+    $('body').addClass("touch-device");
+  }
+
 });
