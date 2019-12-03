@@ -51,7 +51,7 @@
     function renderSlider(slider) {
       slider.wrap("<div class='slider-wrap'></div>");
       $('.slider-wrap').wrap("<div class='slider-container'></div>");
-      $('<div class="slider-nav"><button class="arrow-left"></button><button class="arrow-right"></button></div>').appendTo(".slider-wrap");
+      $('<div class="slider-nav"><button name="left arrow button" class="arrow-left"></button><button name="right arrow button" class="arrow-right"></button></div>').appendTo(".slider-wrap");
 
       renderClone(slider);
       bindEvents(slider);
