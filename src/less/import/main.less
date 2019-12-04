@@ -54,14 +54,13 @@
   }
 
   .img-block {
-
-    @media @laptop {
-      width: auto;
-    }
-
     @media @tablet {
       width     : 100%;
       text-align: center;
+    }
+
+    @media @laptop {
+      width: auto;
     }
   }
 }
@@ -293,7 +292,7 @@
       height       : 72px;
       position     : absolute;
       left         : 0;
-      border-radius: 100%;
+      border-radius: 50%;
       overflow     : hidden;
     }
 
@@ -338,8 +337,8 @@
 .contact-section {
   text-align: center;
 
-  .left-side,
-  .right-side {
+  .credentialsSide,
+  .messageSide {
     width        : 100%;
     max-width    : 527px;
     margin-bottom: 40px;
@@ -349,15 +348,20 @@
     }
   }
 
-  .left-side {
+  .credentialsSide {
     @media @tablet {
       // float: left;
     }
   }
 
-  .right-side {
+  .messageSide {
     @media @tablet {
       // float: right;
     }
   }
+}
+
+.contactForm {
+  display  : flex;
+  flex-wrap: wrap;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="text/html">
   <title>Pitchbook test task</title>
   <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -28,24 +28,24 @@
 
 <body>
   <header>
-    <div class="top-navbar">
+    <div class="navigationBar">
       <div class="container">
-        <nav>
-          <div class="navbar-header ohidden">
-            <button aria-label="Menu button" type="button" class="top-navbar-toggler">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+        <nav class="navigationBar__linkSection">
+          <div class="navigationBar__header ohidden">
+            <button aria-label="Menu button" type="button" class="navigationBar__toggler">
+              <span class="navigationBar__toggler-bar"></span>
+              <span class="navigationBar__toggler-bar"></span>
+              <span class="navigationBar__toggler-bar"></span>
             </button>
             <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="brand"></a>
           </div>
           <div class="navigation">
             <ul>
-              <li>
-                <a href="#" class="top-link">Features</a>
-                <div class="dropdown-block">
-                  <div class="dropdown-block-container  flex-container">
-                    <ul class="preview-pages">
+              <li class="navigation__listItem">
+                <a href="#" class="link">Features</a>
+                <div class="dropdownBlock">
+                  <div class="dropdownBlock__container  flex-container">
+                    <ul class="previewPages">
                       <li>
                         <a href="about.html">
                           <span>About us</span>
@@ -55,7 +55,7 @@
                       <li>
                         <a href="partners.html">
                           <span>Our partners</span>
-                          <img src="assets/images/preview-page.png" alt="menu-items">
+                          <img aria src="assets/images/preview-page.png" alt="menu-items">
                         </a>
                       </li>
                       <li>
@@ -71,7 +71,7 @@
                         </a>
                       </li>
                     </ul>
-                    <ul class="list-pages">
+                    <ul class="listPages">
                       <li><a href="#">1. Product</a></li>
                       <li><a href="#"> API and Datafeed</a></li>
                       <li><a href="#">Platform</a></li>
@@ -92,11 +92,11 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <a href="#" class="top-link">About</a>
-                <div class="dropdown-block">
-                  <div class="dropdown-block-container  flex-container">
-                    <ul class="preview-pages">
+              <li class="navigation__listItem">
+                <a href="#" class="link">About</a>
+                <div class="dropdownBlock">
+                  <div class="dropdownBlock__container  flex-container">
+                    <ul class="previewPages">
                       <li>
                         <a href="about.html">
                           <span>About us</span>
@@ -122,7 +122,7 @@
                         </a>
                       </li>
                     </ul>
-                    <ul class="list-pages">
+                    <ul class="listPages">
                       <li><a href="#">2. Product</a></li>
                       <li><a href="#"> API and Datafeed</a></li>
                       <li><a href="#">Platform</a></li>
@@ -143,11 +143,11 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <a href="#" class="top-link">Pricing</a>
-                <div class="dropdown-block">
-                  <div class="dropdown-block-container  flex-container">
-                    <ul class="preview-pages">
+              <li class="navigation__listItem">
+                <a href="#" class="link">Pricing</a>
+                <div class="dropdownBlock">
+                  <div class="dropdownBlock__container  flex-container">
+                    <ul class="previewPages">
                       <li>
                         <a href="about.html">
                           <span>About us</span>
@@ -173,7 +173,7 @@
                         </a>
                       </li>
                     </ul>
-                    <ul class="list-pages">
+                    <ul class="listPages">
                       <li><a href="#">3. Product</a></li>
                       <li><a href="#"> API and Datafeed</a></li>
                       <li><a href="#">Platform</a></li>
@@ -194,11 +194,11 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <a href="#" class="top-link">Reviews</a>
-                <div class="dropdown-block">
-                  <div class="dropdown-block-container  flex-container">
-                    <ul class="preview-pages">
+              <li class="navigation__listItem">
+                <a href="#" class="link">Reviews</a>
+                <div class="dropdownBlock">
+                  <div class="dropdownBlock__container  flex-container">
+                    <ul class="previewPages">
                       <li>
                         <a href="about.html">
                           <span>About us</span>
@@ -224,7 +224,7 @@
                         </a>
                       </li>
                     </ul>
-                    <ul class="list-pages">
+                    <ul class="listPages">
                       <li><a href="#">4. Product</a></li>
                       <li><a href="#"> API and Datafeed</a></li>
                       <li><a href="#">Platform</a></li>
@@ -245,11 +245,11 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <a href="#" class="top-link">Contact</a>
-                <div class="dropdown-block">
-                  <div class="dropdown-block-container  flex-container">
-                    <ul class="preview-pages">
+              <li class="navigation__listItem">
+                <a href="#" class="link">Contact</a>
+                <div class="dropdownBlock">
+                  <div class="dropdownBlock__container  flex-container">
+                    <ul class="previewPages">
                       <li>
                         <a href="about.html">
                           <span>About us</span>
@@ -275,7 +275,7 @@
                         </a>
                       </li>
                     </ul>
-                    <ul class="list-pages">
+                    <ul class="listPages">
                       <li><a href="#">5. Product</a></li>
                       <li><a href="#"> API and Datafeed</a></li>
                       <li><a href="#">Platform</a></li>
@@ -302,6 +302,8 @@
       </div>
     </div>
   </header>
+
+  <!-- move hero to header -->
 
   <section class="hero"
     style="background: url('assets/images/header-panel.png') no-repeat center; padding: 60px 0; background-size: cover;">
@@ -370,7 +372,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
             bibendum laoreet.
           </p>
-          <button type="button" type="button" class="btn btn-primary btn-round">Download</button>
+          <button type="button" class="btn btn-primary btn-round">Download</button>
         </div>
         <div id="tab2">
           <h2 class="title-section-small">Tabs2 with soft transitioning effect.</h2>
@@ -382,7 +384,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
             bibendum laoreet.
           </p>
-          <button type="button" type="button" class="btn btn-primary btn-round">Download</button>
+          <button type="button" class="btn btn-primary btn-round">Download</button>
         </div>
         <div id="tab3">
           <h2 class="title-section-small">Tabs3 with soft transitioning effect.</h2>
@@ -394,7 +396,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
             bibendum laoreet.
           </p>
-          <button type="button" type="button" class="btn btn-primary btn-round">Download</button>
+          <button type="button" class="btn btn-primary btn-round">Download</button>
         </div>
       </div>
       <div class="img-block"><img src="assets/images/image-city.png" alt="tabs-section"></div>
@@ -634,15 +636,15 @@
       <h1 class="large-title line-after light-line line-after-center">STYLISH AXURE DESIGN</h1>
       <span class="subtitle">Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster
         than ever!</span>
-      <button type="button" type="button" class="btn btn-transparent">Download</button>
+      <button type="button" class="btn btn-transparent">Download</button>
     </div>
   </section>
   <section class="contact-section">
     <div class="container">
       <h1 class="large-title line-after line-after-center">CONTACT US</h1>
       <span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-      <form action="/" method="POST">
-        <div class="left-side">
+      <form action="/" method="POST" class="contactForm">
+        <div class="credentialsSide">
           <div class="field-row">
             <input aria-label="Name" type="text" placeholder="Name">
           </div>
@@ -653,13 +655,14 @@
             <input aria-label="Subject" type="text" placeholder="Subject">
           </div>
         </div>
-        <div class="right-side">
+        <!--  Message field (paddings)  -->
+        <div class="messageSide">
           <div class="field-row">
-            <textarea aria-label="Message" id="" cols="30" rows="9" placeholder="Message"></textarea>
+            <textarea aria-label="Message" id="contactFormMessage" cols="30" rows="10" placeholder="Message"></textarea>
           </div>
         </div>
         <div class="field-row clear">
-          <button type="button" type="button" type="submit" class="btn btn-primary btn-round">Send Message</button>
+          <button type="button" type="submit" class="btn btn-primary btn-round">Send Message</button>
         </div>
       </form>
     </div>

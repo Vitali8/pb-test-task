@@ -1,10 +1,10 @@
 $(document).ready(function () {
   //mobile menu
-  $('.top-navbar-toggler').on('click', function () {
+  $('.navigationBar__toggler').on('click', function () {
     $('.navigation').toggleClass('menu-open');
   });
 
-  $('.top-link').on('mouseenter', function () {
+  $('.link').on('mouseenter', function () {
     $(this).closest('li').addClass('dropdownShow');
   }).on('click', function (e) {
     e.preventDefault();
@@ -30,9 +30,9 @@ $(document).ready(function () {
     tabs($('.active-tab-content > div'), $('div#' + clickTab));
   });
 
-  $('.top-link').on('click', function () {
+  $('.link').on('click', function () {
     if ($(window).width() < 1024) {
-      $('.top-link').not(this).closest('li').removeClass('dropdownShow');
+      $('.link').not(this).closest('li').removeClass('dropdownShow');
       $(this).closest('li').toggleClass('dropdownShow');
     }
   });
