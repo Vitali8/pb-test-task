@@ -43,4 +43,5 @@ $(document).ready(function () {
     $('body').addClass("touch-device");
   }
 
+  $('#yearSpan').text(new Date().getFullYear());
 });
