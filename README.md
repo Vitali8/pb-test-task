@@ -12,10 +12,19 @@ Technology stack:
 5. Create carousel plugin as independent.
 6. Create responsive (adaptive) design.
 
+## Preview
+
+**[View Live Preview](https://vitali8.github.io/pb-test-task/)**
+
 ## How to run the project
 
+* Clone the repo: 
+```bash
+git clone https://github.com/vitali8/pb-test-task.git
+```
+ * Install via npm or yarn and run build task:
 ```bash
 yarn|npm install && gulp build
 ```
 
-Open index.html
+ * Open index.html
