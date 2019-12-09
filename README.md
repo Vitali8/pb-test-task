@@ -2,7 +2,7 @@
 
 This is a test task for SPD Ukraine.
 
-Key words: HTML5, CSS, LESS, JS, JQUERY, PixelPerfect, Gulp.
+Key words: HTML5, CSS, LESS, JS, JQUERY, Gulp.
 
 Technology stack: 
 1. Use version control - Git.
